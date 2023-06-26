@@ -1,0 +1,85 @@
+.card-front {
+  background-image: url("../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 430px;
+  height: 240px;
+  border-radius: 8px;
+  position: relative;
+  left: 180px;
+  top: 130px;
+  padding: 30px;
+}
+
+.card-front h2,
+p {
+  color: white;
+}
+
+.card-front h2 {
+  font-size: 26px;
+  padding-top: 60px;
+  padding-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.card-front p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-front .expDetails {
+  margin-left: auto;
+}
+
+.circle-left,
+.circle-right {
+  border-radius: 50px;
+}
+
+.circle-left {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.circle-right {
+  margin: auto auto auto 15px;
+  width: 20px;
+  height: 20px;
+  border: 0.1px solid white;
+}
+
+@media (max-width: 690px) {
+  .card-front {
+    background-size: cover;
+    width: 300px;
+    height: 170px;
+    padding: 15px;
+    left: 15px;
+    top: 135px;
+    z-index: 1;
+  }
+
+  .circle-left {
+    width: 35px;
+    height: 35px;
+  }
+
+  .circle-right {
+    margin: auto auto auto 10px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .card-front h2 {
+    font-size: 19px;
+    padding-bottom: 7px;
+    padding-top: 50px;
+  }
+
+  .card-front p {
+    font-size: 10px;
+  }
+}

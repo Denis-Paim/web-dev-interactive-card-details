@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import CardFront from "./components/cardFront/cardFront";
+import CardBack from "./components/cardBack/cardBack";
+import Form from "./components/form/form";
 
 function App() {
+  const [cardNumber, setCardNumber] = useState("");
+  const [cardName, setCardName] = useState("");
+  const [expDateMonth, setExpDateMonth] = useState("");
+  const [expDateYear, setExpDateYear] = useState("");
+  const [cardVerification, setCardVerification] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="img-left">
+        <CardFront
+          cardNumber={cardNumber}
+          cardName={cardName}
+          expDateMonth={expDateMonth}
+          expDateYear={expDateYear}
+        />
+        <CardBack cardVerification={cardVerification} />
+      </div>
+      <div className="right">
+        <Form
+          cardNumber={cardNumber}
+          cardName={cardName}
+          expDateMonth={expDateMonth}
+          expDateYear={expDateYear}
+          cardVerification={cardVerification}
+          setCardNumber={setCardNumber}
+          setCardName={setCardName}
+          setExpDateMonth={setExpDateMonth}
+          setExpDateYear={setExpDateYear}
+          setCardVerification={setCardVerification}
+        />
+      </div>
     </div>
   );
 }
