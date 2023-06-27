@@ -14,7 +14,7 @@
 
   },
 
-  "homepage": "https://github.com/Denis-Paim/web-dev-interactive-card-details",
+  "homepage": "https://denis-paim.github.io/web-dev-interactive-card-details/",
 
   "scripts": {
     "predeploy": "npm run build",
